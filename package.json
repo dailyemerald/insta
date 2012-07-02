@@ -1,9 +1,12 @@
 {
-  "name":"EmeraldInsta",
-  "version":"0.1.0",
-  "dependencies":{
-    "parse-api":">=0.1.0",
-    "express":">=3.0.0beta4",
-    "bbb":">=0.1.4"
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.0alpha1",
+    "jade": "*"
   }
 }
