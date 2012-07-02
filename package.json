@@ -3,6 +3,7 @@
   "version":"0.1.0",
   "dependencies":{
     "parse-api":">=0.1.0",
-    "express":">=3.0.0beta4"
+    "express":">=3.0.0beta4",
+    "bbb":">=0.1.4"
   }
 }
