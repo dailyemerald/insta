@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Manage
+  p Hi #{user.full_name}... we're working on this page.
+  a(href="/build_test") Build test?
+  br
+  br
+  
+  for subscription in subscriptions
+    a(href='/delete/#{subscription.id}') #{subscription.id}
+    br
