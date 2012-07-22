@@ -8,5 +8,9 @@ block content
   br
   
   for subscription in subscriptions
-    a(href='/delete/#{subscription.id}') #{subscription.id}
+    p 
+      | #{subscription.streamID} 
+      a(href='/#{subscription.streamID}') View
+      | 
+      a(href='/delete/#{subscription.id}') Delete
     br

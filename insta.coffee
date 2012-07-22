@@ -196,6 +196,8 @@ app.get '/manage', (req, res) ->
   if user?
     listSubscriptions (subscriptions) ->
       console.log JSON.stringify subscriptions
+      for subscription in subscriptions.data
+        subscription.streamID = subscription.callback_url.split("/").pop()
       res.render 'manage.jade', {user: user, subscriptions: subscriptions.data }
   else 
     res.redirect '/start'
@@ -222,7 +224,10 @@ app.get '/build_test', (req, res) ->
     if err?
       res.send 'err', err
     else
-      res.send 'data', data
+      res.redirect '/manage'
+
+app.get '/:streamID', (req, res) ->
+  res.render 'stream.jade'
 
 app.get '/logout', (req, res) ->
   req.session.destroy (err) ->
